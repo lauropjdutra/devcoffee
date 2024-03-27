@@ -1,0 +1,431 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Oswald&display=swap');
+
+:root {
+  --main-color: #d3ad7f;
+  --dark-gray: #13131a;
+  --black: #010103;
+  --white: #ffffff;
+  --border: 0.1rem solid #ffffff33;
+  font-size: 10px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--black);
+}
+
+header {
+  width: 100%;
+  position: fixed;
+  background: #010103;
+  border-bottom: var(--border);
+  z-index: 99;
+}
+
+.inner-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+section {
+  max-width: 1200px;
+  padding: 3rem 2rem 5rem;
+  margin: 0 auto;
+}
+
+nav a {
+  margin: 0 1rem;
+  padding-bottom: 0.2rem;
+  font-size: 1.6rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: all ease .2s;
+}
+
+nav a:hover {
+  color: var(--main-color);
+  border-bottom: 0.1rem solid var(--main-color);
+}
+
+nav a:active {
+  opacity: .6;
+}
+
+.icons img {
+  width: 40px;
+  height: 40px;
+  margin: 0.1rem;
+  padding: 0.7rem;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all ease-in-out .2s;
+}
+
+.icons img:hover {
+  background: var(--main-color);
+}
+
+.icons img:active {
+  opacity: .6;
+}
+
+.hero-container {
+  background: url("./assets/home-img.jpg") no-repeat center/cover;
+  background-attachment: fixed;
+}
+
+.hero-container section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.inner-hero {
+  max-width: 70rem;
+  color: var(--white);
+}
+
+.inner-hero h1 {
+  font-size: 7rem;
+  font-weight: 900;
+  line-height: 1.1;
+  word-spacing: -0.5rem;
+}
+
+.inner-hero p {
+  width: 85%;
+  margin-top: 1rem;
+  font-size: 2.1rem;
+  font-weight: 100;
+  line-height: 1.5;
+}
+
+.btn {
+  margin-top: 2rem;
+  padding: 1.1rem 3.5rem;
+  background:var(--main-color);
+  color: var(--black);
+  font-size: 1.7rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 0.8rem;
+  cursor: pointer;
+  transition: ease .2s;
+}
+
+.btn:hover {
+  filter: brightness(1.1);
+}
+
+.btn:active {
+  opacity: .6;
+}
+
+#about {
+  min-height: 80vh;
+  padding: 2rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: var(--border);
+}
+
+.title {
+  margin-bottom: 5rem;
+  font-size: 5rem;
+  font-weight: 800;
+  color: var(--main-color);
+  text-align: center;
+}
+
+.title span {
+  color: var(--white);
+}
+
+.inner-about {
+  padding: 0;
+  display: flex;
+  align-items: center;
+  background: var(--dark-gray);
+  gap: 1.2rem;
+}
+
+.img {
+  line-height: 0;
+}
+
+.text {
+  color: var(--white);
+  padding: 2rem;
+}
+
+.text h3 {
+  font-size: 3rem;
+}
+
+.text p {
+  font-size: 1.5rem;
+  font-weight: 200;
+  margin-top: 1rem;
+  line-height: 1.5;
+}
+
+#menu {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: var(--border);
+}
+
+.cards {
+  max-width: 1000px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  padding: 5rem;
+  color: var(--white);
+  text-align: center;
+  border: var(--border);
+  cursor: pointer;
+  transition: ease .5s;
+}
+
+.card:hover {
+  background: #d3ad7fdd;
+}
+
+.card img {
+  width: 10rem;
+  border-radius: 50%;
+  box-shadow: 1px 1px 16px #000000;
+}
+
+.card h3 {
+  padding: 0.5rem 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+
+.card p {
+  font-size: 2rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card span {
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-decoration: line-through;
+}
+
+.card .btn {
+  margin-top: 1.5rem;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+.card:hover>* {
+  color: var(--black);
+  transition: ease .5s;
+}
+
+.card:hover>button {
+  padding: 1rem 2rem;
+  color: var(--main-color);
+  background: var(--black);
+  transition: ease .5s;
+}
+
+#reviews {
+  min-height: 75vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+}
+
+.reviews {
+  justify-content: center;
+  max-width: 1200px;
+  display: flex;
+}
+
+.review img {
+  width: 7rem;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.review img:nth-child(3) {
+  border-radius: 50%;
+}
+
+.review {
+  max-width: 360px;
+  padding: 3rem 2rem;
+}
+
+.review p {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+
+.review:hover {
+  cursor: auto;
+  background: none;
+}
+
+.review:hover>* {
+  color: var(--white);
+}
+
+#address {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: var(--border);
+}
+
+iframe {
+  max-width: 800px;
+}
+
+footer {
+  width: 100%;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--black);
+  cursor: default;
+}
+
+footer h3, footer h4 {
+  padding: 0;
+  color: var(--white);
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+footer i {
+  font-size: 1.6rem;
+  padding: 0 0 0.5rem 0.3rem;
+  transition: 0.5s;
+}
+
+footer i:hover {
+  transform: translateY(-5px);
+}
+
+footer a {
+  color: var(--main-color);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+footer a:active {
+  opacity: 0.7;
+}
+
+@media screen and (max-width: 768px) {
+  nav {
+    display: none;
+  }
+
+  .inner-header {
+    justify-content: space-around;
+  }
+
+  .hero-container {
+    background-position: -1000px;
+  }
+
+  .hero-container section {
+        /* width: 100vw; */
+    /* justify-content: center; */
+    align-items: flex-end;
+  }
+  
+  .inner-hero {
+    text-align: center;
+    padding-bottom: 3rem;
+  }
+  
+  .inner-hero h1 {
+    margin: 0 auto;
+    width: 80%;
+    font-size: 4.5rem;
+    text-shadow: 0px 0px 15px #000000;
+  }
+  
+  .inner-hero p {
+    width: 100%;
+    font-size: 1.6rem;
+    font-weight: 300;
+    text-shadow: 0px 0px 15px #000000;
+  }
+
+  #about {
+    padding: 0;
+  }
+  
+  .title {
+    font-size: 4rem;
+    margin: 4rem 0;
+  }
+
+  .inner-about {
+    flex-direction: column;
+  }
+
+  .inner-about .btn {
+    margin-bottom: 2rem;
+  }
+
+  .img img {
+    max-width: 100%;
+  }
+
+  #address section {
+    padding: 0;
+  }
+
+  iframe {
+    width: 100%;
+  }
+
+  footer {
+    padding: 15px;
+  }
+
+  footer h3, footer h4, footer i {
+    font-size: 1.3rem;
+  }
+}
